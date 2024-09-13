@@ -10,7 +10,11 @@ export default function VideoPlayer({ data }: { data: ApiResponse }) {
   const [isPlaying, setIsPlaying] = useState(true);
   const player = useVideoPlayer(
     {
-      uri: data.resolutions["Fast Download"],
+      uri: data.resolutions["HD Video"],
+      headers: {
+        cookie:
+          "browserid=z09C3XFwfWw9lPvS64DPoLVX3q8o9y2-cDBuNofHMAWBkvjUbUlEFjIh6L8=; lang=en; TSID=QhognhPqYAJ1AactOacigULhNDPH8ai9; __bid_n=191ea0f213837e3b6e4207; _ga_06ZNKL8C2E=GS1.1.1726214213.3.1.1726216196.59.0.0; _ga=GA1.1.1419035484.1726208747; ndus=Y-ZNVKxteHuiNU92ow2Ut_G1kbh_Taz4aUzfi290; PANWEB=1",
+      },
       metadata: {
         title: data.title,
       },

@@ -221,7 +221,11 @@
     "extra": {
       "router": {
         "origin": false
+      },
+      "eas": {
+        "projectId": "b7b6b983-86d2-45e7-8127-0b58820ab96d"
       }
-    }
+    },
+    "owner": "wnsjscroxtt"
   }
 }

@@ -68,7 +68,8 @@ const Page = () => {
   const getInitUrl = useCallback(() => {
     const func = async () => {
       const data = await Linking.getInitialURL();
-      if (!data || data.length < 0) return;
+      const check = checkUrlPatterns(text);
+      if (!check || !data || data.length < 0) return;
       setText(data);
       submit(data);
     };
